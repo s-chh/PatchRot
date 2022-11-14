@@ -1,0 +1,15 @@
+{
+	"epochs":300,
+	"warmup":10,
+	"lr":5e-4,
+	"weight_decay":3e-2,
+	"batch_size":128,
+	"image_size":32,
+	"hflip": false,
+	"num_channels":1,
+	"num_classes":10,
+	"cm":true,
+	"padding": 0,
+	"mean" : [0.5],
+	"std": [0.5]
+}

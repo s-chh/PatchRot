@@ -1,0 +1,21 @@
+{
+	"epochs":300,
+	"warmup":10,
+	"lr":5e-4,
+	"batch_size":128,
+	"weight_decay":1e-4,
+	"image_size":32,
+	"hflip": false,
+	"num_channels":3,
+	"num_classes":10,
+	"cm":true,
+	"hidden_size":256,
+	"num_hidden_layers":6,
+	"num_attention_heads":4,
+	"forward_mul":2,
+	"padding": 0,
+	"mean" : [0.4376821, 0.4437697, 0.47280442],
+	"std": [0.19803012, 0.20101562, 0.19703614],
+	"co_len": 20
+}
+

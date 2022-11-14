@@ -1,0 +1,14 @@
+{
+	"warmup":25,
+	"lr":5e-4,
+	"batch_size":128,
+	"weight_decay":3e-2,
+	"image_size":64,
+	"hflip": true,
+	"num_channels":3,
+	"num_classes":200,
+	"cm":false,
+	"padding": 4,
+	"mean": [0.5, 0.5, 0.5],
+	"std": [0.5, 0.5, 0.5]
+}
