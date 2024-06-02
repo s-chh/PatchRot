@@ -4,7 +4,7 @@ This is the official PyTorch Implementation of our PatchRot paper [PatchRot: Sel
 ## Introduction
 PatchRot rotates images and image patches and trains the network to predict the rotation angles. 
 The network learns to extract global image and patch-level features through this process. 
-PatchRot pretraining extracts superior features and results in improved performance. <br>
+PatchRot pretraining extracts superior features and provides improved performance. <br>
 
 ## Run commands:
 Run <strong>main_pretrain.py</strong> to pre-train the network with PatchRot, followed by <strong>main_finetune.py --init patchrot</strong> to finetune the network.<br>
