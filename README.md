@@ -13,8 +13,8 @@ Below is an example on CIFAR10:
 
 | Method | Run Command |
 | :---         |     :---:     |
-| PatchRot Pretraining | python -u main_pretrain.py --dataset cifar10 |
-| Finetuning Pretrained Model | python -u main_finetune.py --dataset cifar10 --init patchrot |
+| PatchRot pretraining | python -u main_pretrain.py --dataset cifar10 |
+| Finetuning pretrained model | python -u main_finetune.py --dataset cifar10 --init patchrot |
 | Training from random init | python -u main_finetune.py --dataset cifar10 --init none |
 
 Replace cifar10 with the appropriate dataset. <br>
