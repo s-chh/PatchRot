@@ -1,14 +1,15 @@
 # PatchRot
 
 ## Introduction
+This is the official PyTorch Implementation of our PatchRot paper [PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction](https://arxiv.org/abs/2210.15722)
 PatchRot rotates images and image patches and trains the network to predict the rotation angles. 
 Through this process, the network learns to extract both global image and patch-level features. 
 PatchRot pretraining extracts superior features and results in improved performance. <br>
-This is the official PyTorch Implementation of our paper [PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction](https://arxiv.org/abs/2210.15722)
 
 ## Run commands:
-Run main_pretrain.py to pre-train the network with PatchRot, followed by main_finetune.py --init patchrot to finetune the network.<br>
-main_finetune.py --init none can be used to train the network without any pretraining (training from random initialization)
+Run <strong>main_pretrain.py</strong> to pre-train the network with PatchRot, followed by <strong>main_finetune.py --init patchrot</strong> to finetune the network.<br>
+<strong>main_finetune.py --init none</strong> can be used to train the network without any pretraining (training from random initialization).<br>
+Below is an example on CIFAR10:
 <table>
   <tr>
     <th>Method</th>
