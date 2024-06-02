@@ -1,7 +1,7 @@
 # PatchRot
 
 ## Introduction
-This is the official PyTorch Implementation of our PatchRot paper [PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction](https://arxiv.org/abs/2210.15722)
+This is the official PyTorch Implementation of our PatchRot paper [PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction](https://arxiv.org/abs/2210.15722). <br>
 PatchRot rotates images and image patches and trains the network to predict the rotation angles. 
 Through this process, the network learns to extract both global image and patch-level features. 
 PatchRot pretraining extracts superior features and results in improved performance. <br>
