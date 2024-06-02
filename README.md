@@ -12,7 +12,7 @@ Run <strong>main_pretrain.py</strong> to pre-train the network with PatchRot, fo
 Below is an example on CIFAR10:
 
 | Method | Run Command |
-| :---         || :---         |
+| :---         | :---         |
 | PatchRot pretraining | python -u main_pretrain.py --dataset cifar10 |
 | Finetuning pretrained model | python -u main_finetune.py --init patchrot --dataset cifar10 |
 | Training from random init | python -u main_finetune.py --init none --dataset cifar10 |
