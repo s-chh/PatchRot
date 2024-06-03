@@ -6,7 +6,7 @@ PatchRot rotates images and image patches and trains the network to predict the 
 The network learns to extract global image and patch-level features through this process. 
 PatchRot pretraining extracts superior features and provides improved performance. <br>
 
-## Run commands:
+## Run commands (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>):
 Run <strong>main_pretrain.py</strong> to pre-train the network with PatchRot, followed by <strong>main_finetune.py --init patchrot</strong> to finetune the network.<br>
 <strong>main_finetune.py --init none</strong> can be used to train the network without any pretraining (training from random initialization).<br>
 Below is an example on CIFAR10:
