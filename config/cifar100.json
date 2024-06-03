@@ -1,0 +1,24 @@
+{
+	"patch_size": 4,
+	"pretrain_epochs":300,
+	"finetune_epochs":50,
+	"scratch_epochs":300,
+	"pretrain_warmup":10,
+	"finetune_warmup":5,
+	"pretrain_lr":5e-4,
+	"finetune_lr":1e-3,
+	"batch_size":256,
+	"weight_decay":0.05,
+	"image_size":32,
+	"hflip": true,
+	"randomresizecrop": false,
+	"padding": 4,	
+	"resizecrop": 0,
+	"n_channels":3,
+	"n_classes":100,
+	"cm": false,
+	"mean" : [0.5071, 0.4867, 0.4408],
+	"std": [0.2675, 0.2565, 0.2761]
+}
+
+
