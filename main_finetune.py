@@ -11,9 +11,7 @@ def main(args):
 	os.makedirs(args.model_path, exist_ok=True)
 
 	solver = Solver(args)
-
 	solver.train()
-	solver.test(train=True)
 
 
 def update_args(args):
