@@ -34,7 +34,7 @@ TinyImageNet, Animals10N, and ImageNet100 need to be downloaded, and the path ne
 | ImageNet100 | 64.6 | 75.4 |
 
 ## Citation
-If you use this method or this code in your paper, then please cite:
+If you use this method or this code, please cite our paper:
 
 ```
 @article{chhabra2022patchrot,
