@@ -1,5 +1,5 @@
 # PatchRot
-This is the official PyTorch Implementation of our PatchRot paper [PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction](https://arxiv.org/abs/2210.15722). <br>
+This is the official PyTorch Implementation of our upcoming BMVC 2024 PatchRot paper [PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction]. <br>
 
 ## Introduction
 PatchRot rotates images and image patches and trains the network to predict the rotation angles. 
@@ -32,15 +32,3 @@ TinyImageNet, Animals10N, and ImageNet100 need to be downloaded, and the path ne
 | Animals10N | 69.6 | 79.5 |
 | TinyImageNet | 38.4 | 48.8 |
 | ImageNet100 | 64.6 | 75.4 |
-
-## Citation
-If you use this method or this code, please cite our paper:
-
-```
-@article{chhabra2022patchrot,
-  title={PatchRot: A Self-Supervised Technique for Training Vision Transformers},
-  author={Chhabra, Sachin and Dutta, Prabal Bijoy and Venkateswara, Hemanth and Li, Baoxin},
-  journal={arXiv preprint arXiv:2210.15722},
-  year={2022}
-}
-```
