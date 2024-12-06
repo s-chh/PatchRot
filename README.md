@@ -2,6 +2,9 @@
 Official PyTorch Implementation of our upcoming BMVC 2024 PatchRot paper "PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction". <br>
 
 ## Introduction
+TLDR: Technique to train Vision Transformers in a self-supervised manner by predicting rotation angles of images and image patches.
+
+**Overview**
 - Self-supervised training strategy for Vision Transformers to learn rich and transferrable features.
 - PatchRot rotates images and image patches by 0°, 90°, 180°, or 270°.
 - Trains the network to predict the rotation angles of images and image patches via classification.
@@ -18,8 +21,8 @@ Below is an example on CIFAR10:
 | :---         | :---         |
 | PatchRot pretraining | python main_pretrain.py --dataset cifar10 |
 | Finetuning pretrained model | python main_finetune.py --dataset cifar10 --init patchrot |
-- For baseline (random init) training use <strong>`main_finetune.py --dataset cifar10 --init none`</strong>
-- We used a DeiT-Tiny transformer for the experiments and modified patch sizes based on the dataset.
+- For baseline training (random init) use <strong>`main_finetune.py --dataset cifar10 --init none`</strong>
+- We used a DeiT-Tiny transformer for the experiments and modified the patch size based on the dataset.
    - Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a>
 
 - To change the dataset, replace cifar10 with the appropriate dataset. <br>
@@ -29,14 +32,15 @@ Below is an example on CIFAR10:
 ## Results
 | Dataset | Without PatchRot Pretraining | With PatchRot Pretraining |
 | :---         |     :---:      |     :---:      |
-| CIFAR10 | 84.4 | 91.3 |
-| CIFAR100 | 56.5 | 66.7 |
+| Cifar10 | 84.4 | 91.3 |
+| Cifar100 | 56.5 | 66.7 |
 | FashionMNIST | 93.4 | 94.6|
 | SVHN | 92.9 | 96.4 |
 | Animals10N | 69.6 | 79.5 |
 | TinyImageNet | 38.4 | 48.8 |
 | ImageNet100 | 64.6 | 75.4 |
 
+## Cite
 If you found our work/code helpful, please cite our paper:
 ```
 Bibtex upcoming
