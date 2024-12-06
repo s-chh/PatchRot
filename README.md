@@ -1,5 +1,5 @@
 # PatchRot
-Official PyTorch Implementation of our upcoming BMVC 2024 PatchRot paper "PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction". <br>
+Official Implementation of paper "PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction". <br>
 
 ## Introduction
 TLDR: Self-supervised technique for vision transformers that predicts rotation angles of images and patches.
