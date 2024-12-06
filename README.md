@@ -30,11 +30,7 @@ PatchRot is a self-supervised learning technique designed for Vision Transformer
 
 ## Usage
 ### Requirements
-- **Python** (>= 3.8)
-- **scikit-learn**
-- **PyTorch** (>= 1.10)
-- **torchvision**
-- **timm** (for defining Vision Transformers, can be replaced with other frameworks)
+**Python** (>= 3.8),  **scikit-learn**,  **PyTorch** (>= 1.10), **torchvision**, and **timm** (for defining Vision Transformers, can be replaced with other frameworks)
 
 ### Run commands (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>):
 To pre-train and finetune models using PatchRot, run the following commands. Examples are provided for CIFAR10.
