@@ -2,7 +2,7 @@
 Official PyTorch Implementation of our upcoming BMVC 2024 PatchRot paper "PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction". <br>
 
 ## Introduction
-TLDR: Self-supervised technique to train Vision Transformers by predicting rotation angles of images and image patches.
+TLDR: Self-supervised technique for Vision Transformers that predicts rotation angles of images and patches.
 
 **Overview**
 - Self-supervised training strategy for Vision Transformers to learn rich and transferrable features.
