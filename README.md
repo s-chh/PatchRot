@@ -2,7 +2,8 @@
 Official Implementation of paper "PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction". <br>
 
 ## Introduction
-TLDR: Self-supervised technique for vision transformers that predicts rotation angles of images and patches.
+Summary: Self-supervised technique for vision transformers that predicts rotation angles of images and patches.
+<img src="/figures/toy.jpg" width="700"></img>
 
 **Overview**
 - Self-supervised training strategy for vision transformers to learn rich and transferrable features.
