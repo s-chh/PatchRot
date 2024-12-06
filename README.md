@@ -2,7 +2,7 @@
 Official Implementation of paper "PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction". <br>
 
 ## Introduction
-Summary: Self-supervised technique for vision transformers that predicts rotation angles of images and patches.
+1-line summary: Self-supervised technique for vision transformers that predicts rotation angles of images and patches.
 <p align="center">
 <img src="/figures/Toy.jpg" width="90%"></img>
 </p>
@@ -38,12 +38,12 @@ Below is an example on CIFAR10:
 
 ### Data
 - To change the dataset, **replace cifar10** with the **appropriate dataset**. <br>
-- Cifar10, Cifar100, FashionMNIST, and SVHN will be auto-downloaded.
+- **Cifar10**, **Cifar100**, **FashionMNIST**, and **SVHN** will be auto-downloaded.
  	-  At the path specified in the "data_path" argument (default: "./data").
-- TinyImageNet, Animals10n, and Imagenet100 need to be downloaded.
+- **TinyImageNet**, **Animals10n**, and **Imagenet100** need to be downloaded.
    - Data must be split into 'train' and 'test' folders. 
    - Path needs to be provided using the "data_path" argument.
-- Dataset links:
+- Dataset **links**:
    - TinyImageNet: <a href="http://cs231n.stanford.edu/tiny-imagenet-200.zip">http://cs231n.stanford.edu/tiny-imagenet-200.zip</a> 
    - Animals10N: <a href="https://dm.kaist.ac.kr/datasets/animal-10n/">https://dm.kaist.ac.kr/datasets/animal-10n/</a>  
    - ImageNet100: <a href="https://www.kaggle.com/datasets/ambityga/imagenet100">https://www.kaggle.com/datasets/ambityga/imagenet100/</a>  
