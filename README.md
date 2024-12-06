@@ -3,7 +3,9 @@ Official Implementation of paper "PatchRot: Self-Supervised Training of Vision T
 
 ## Introduction
 Summary: Self-supervised technique for vision transformers that predicts rotation angles of images and patches.
+<p align="center">
 <img src="/figures/Toy.jpg" width="90%"></img>
+</p>
 
 **Overview**
 - Self-supervised training strategy for vision transformers to learn rich and transferrable features.
