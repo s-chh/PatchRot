@@ -23,7 +23,7 @@ Official Implementation of paper "PatchRot: Self-Supervised Training of Vision T
 - Trains the network to predict the rotation angles of images and image patches as a classification task.
 - Incorporates a buffer between patches to prevent trivial solutions such as edge continuity.
 - Employs pretraining at smaller resolutions, followed by finetuning at the original size.
-- This approach encourages the model to learn both global and local representations, improving its performance on downstream tasks.
+- This approach encourages the model to learn both global and patch-level representations.
 - PatchRot was evaluated using the DeiT-Tiny Transformer architecture, with dataset-specific modifications to patch size.
 
 ## Usage
