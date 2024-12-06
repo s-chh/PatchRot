@@ -83,7 +83,7 @@ python main_pretrain.py --dataset tinyimagenet --data_path /path/to/data
 PatchRot significantly improves performance across diverse datasets. The table below compares baseline training (without PatchRot pretraining) and training with PatchRot pretraining:
 
 | Dataset         | Without PatchRot Pretraining | With PatchRot Pretraining |
-|------------------|------------------------------|----------------------------|
+|:------------------|:------------------------------:|:----------------------------:|
 | CIFAR10          | 84.4                         | 91.3                       |
 | CIFAR100         | 56.5                         | 66.7                       |
 | FashionMNIST     | 93.4                         | 94.6                       |
