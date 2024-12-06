@@ -10,16 +10,17 @@ Official PyTorch Implementation of our upcoming BMVC 2024 PatchRot paper "PatchR
 - Learn global and patch-level information of images.
 
 ## Run commands (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>):
-- Run  <strong>```main_pretrain.py```</strong> to pre-train the network with PatchRot.
-- Next <strong>```main_finetune.py --init patchrot```</strong> to finetune the network.
+- Run <strong>`main_pretrain.py`</strong> to pre-train the network with PatchRot.
+- Next <strong>`main_finetune.py --init patchrot`</strong> to finetune the network.
 Below is an example on CIFAR10:
 
 | Method | Run Command |
 | :---         | :---         |
 | PatchRot pretraining | python main_pretrain.py --dataset cifar10 |
 | Finetuning pretrained model | python main_finetune.py --dataset cifar10 --init patchrot |
-- For baseline training from random use <strong>```main_finetune.py --dataset cifar10 --init none```</strong>
-- We used a DeiT-Tiny transformer for the experiments and modified patch sizes based on the dataset (details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a>)
+- For baseline (random init) training use <strong>`main_finetune.py --dataset cifar10 --init none`</strong>
+- We used a DeiT-Tiny transformer for the experiments and modified patch sizes based on the dataset.
+   - Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a>
 
 - To change the dataset, replace cifar10 with the appropriate dataset. <br>
    - Cifar10, Cifar100, FashionMNIST, and SVHN will be auto-downloaded.
@@ -35,3 +36,8 @@ Below is an example on CIFAR10:
 | Animals10N | 69.6 | 79.5 |
 | TinyImageNet | 38.4 | 48.8 |
 | ImageNet100 | 64.6 | 75.4 |
+
+If you found our work/code helpful, please cite our paper:
+```
+Bibtex upcoming
+```
