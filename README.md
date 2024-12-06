@@ -24,33 +24,59 @@ Official Implementation of paper "PatchRot: Self-Supervised Training of Vision T
 - Incorporates a buffer between patches to prevent trivial solutions such as edge continuity.
 - Employs pretraining at smaller resolutions, followed by finetuning at the original size.
 - This approach encourages the model to learn both global and patch-level representations.
-- PatchRot was evaluated using the DeiT-Tiny Transformer architecture, with dataset-specific modifications to patch size.
+- PatchRot was evaluated using the [DeiT-Tiny Transformer](https://arxiv.org/abs/2012.12877), with dataset-specific modifications to patch size.
 
 ## Usage
 ### Requirements
-- Python
-- scikit-learn
-- PyTorch
-- torchvision
-- timm for defining Vision Transformer (can be replaced with other network definition)
+- **Python** (>= 3.8)
+- **scikit-learn**
+- **PyTorch** (>= 1.10)
+- **torchvision**
+- **timm** (for defining Vision Transformers, can be replaced with other frameworks)
 
-### Run commands (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>):
-- Run <strong>`main_pretrain.py`</strong> to pre-train the network with PatchRot.
-- Next <strong>`main_finetune.py --init patchrot`</strong> to finetune the network.
-Below is an example on CIFAR10:
+### Run commands:
+To pre-train and finetune models using PatchRot, run the following commands. Examples are provided for CIFAR10 (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>).
 
-| Method | Run Command |
-| :---         | :---         |
-| PatchRot pretraining | python main_pretrain.py --dataset cifar10 |
-| Finetuning pretrained model | python main_finetune.py --dataset cifar10 --init patchrot |
-- For baseline training (random init) use <strong>`main_finetune.py --dataset cifar10 --init none`</strong>
-- We used a **DeiT-Tiny transformer** for the experiments and modified the patch size based on the dataset.
-   - Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a> folder.
+PatchRot Pretraining
+```bash
+python main_pretrain.py --dataset cifar10
+```
+Finetuning Pretrained Model
+```bash
+python main_finetune.py --dataset cifar10 --init patchrot
+```
+To train a baseline (Without PatchRot) set init to none: `python main_finetune.py --dataset cifar10 --init none`
+
+We used a **DeiT-Tiny transformer** for the experiments and modified the patch size based on the dataset.
+- Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a> folder.
 
 ### Data
 - To change the dataset, **replace cifar10** with the appropriate dataset. <br>
-- **Cifar10**, **Cifar100**, **FashionMNIST**, and **SVHN** will be auto-downloaded.
-- **TinyImageNet**, **Animals10n**, and **Imagenet100** need to be downloaded.
+- **Cifar10**, **Cifar100**, **FashionMNIST**, and **SVHN** are automatically downloaded by the script.
+- **TinyImageNet**, **Animals10n**, and **Imagenet100** need to be downloaded manually.
+#### Dataset Directory Structure
+For manually downloaded datasets, organize the data in the following directory structure:
+```
+data/
+├── train/
+│ ├── class1/
+│ ├── class2/
+├── test/
+│ ├── class1/
+│ ├── class2/
+```
+#### Dataset Links
+Here are the links to download the required datasets:
+- [TinyImageNet](http://cs231n.stanford.edu/tiny-imagenet-200.zip)  
+- [Animals10N](https://dm.kaist.ac.kr/datasets/animal-10n/)  
+- [ImageNet100](https://www.kaggle.com/datasets/ambityga/imagenet100)  
+
+#### Specifying Dataset Paths
+For manually downloaded datasets, use the `--data_path` argument to specify the path to the dataset. Example:
+```bash
+python main_pretrain.py --dataset tinyimagenet --data_path /path/to/data
+```
+   
    - Data must be split into 'train' and 'test' folders. 
    - Path needs to be provided using the "data_path" argument.
 - Dataset links:
