@@ -22,7 +22,8 @@ Below is an example on CIFAR10:
 - We used a DeiT-Tiny transformer for the experiments and modified patch sizes based on the dataset (details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a>)
 
 - To change the dataset, replace cifar10 with the appropriate dataset. <br>
-- CIFAR10, CIFAR100, FashionMNIST, and SVHN will be auto-downloaded. TinyImageNet, Animals10N, and ImageNet100 need to be downloaded, and the path needs to be provided using the "data_path" argument.  
+   - Cifar10, Cifar100, FashionMNIST, and SVHN will be auto-downloaded.
+   - TinyImageNet, Animals10N, and ImageNet100 need to be downloaded, and the path needs to be provided using the "data_path" argument.  
 
 ## Results
 | Dataset | Without PatchRot Pretraining | With PatchRot Pretraining |
