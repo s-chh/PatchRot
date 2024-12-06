@@ -20,13 +20,11 @@ Below is an example on CIFAR10:
 | Finetuning pretrained model | python main_finetune.py --dataset cifar10 --init patchrot |
 
 Replace cifar10 with the appropriate dataset. <br>
-Supported datasets: CIFAR10, CIFAR100, FashionMNIST, SVHN, TinyImageNet, Animals10N, and ImageNet100. <br><br>
-CIFAR10, CIFAR100, FashionMNIST, and SVHN datasets will be downloaded to the path specified in the "data_path" argument (default: "./data").<br>
-TinyImageNet, Animals10N, and ImageNet100 need to be downloaded, and the path needs to be provided using the "data_path" argument. 
+CIFAR10, CIFAR100, FashionMNIST, and SVHN datasets will be auto-downloaded. TinyImageNet, Animals10N, and ImageNet100 need to be downloaded, and the path needs to be provided using the "data_path" argument. 
 
-- <strong>main_finetune.py --init none</strong> can be used to train the network without any pretraining (training from random initialization).<br>
-| Training from random init | python main_finetune.py --dataset cifar10 --init none |
+Baseline training from random initialization can be done using <strong>```main_finetune.py --init none```</strong>
 
+We used a DeiT-Tiny transformer for the experiments and modified patch sizes based on the dataset. Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config folder</a> <br>
 
 ## Results
 | Dataset | Without PatchRot Pretraining | With PatchRot Pretraining |
