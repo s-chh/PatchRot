@@ -34,8 +34,8 @@ Official Implementation of paper "PatchRot: Self-Supervised Training of Vision T
 - **torchvision**
 - **timm** (for defining Vision Transformers, can be replaced with other frameworks)
 
-### Run commands:
-To pre-train and finetune models using PatchRot, run the following commands. Examples are provided for CIFAR10 (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>).
+### Run commands (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>):
+To pre-train and finetune models using PatchRot, run the following commands. Examples are provided for CIFAR10.
 
 PatchRot Pretraining
 ```bash
@@ -76,24 +76,20 @@ For manually downloaded datasets, use the `--data_path` argument to specify the 
 ```bash
 python main_pretrain.py --dataset tinyimagenet --data_path /path/to/data
 ```
-   
-   - Data must be split into 'train' and 'test' folders. 
-   - Path needs to be provided using the "data_path" argument.
-- Dataset links:
-   - TinyImageNet: <a href="http://cs231n.stanford.edu/tiny-imagenet-200.zip">http://cs231n.stanford.edu/tiny-imagenet-200.zip</a> 
-   - Animals10N: <a href="https://dm.kaist.ac.kr/datasets/animal-10n/">https://dm.kaist.ac.kr/datasets/animal-10n/</a>  
-   - ImageNet100: <a href="https://www.kaggle.com/datasets/ambityga/imagenet100">https://www.kaggle.com/datasets/ambityga/imagenet100/</a>  
 
 ## Results
-| Dataset | Without PatchRot Pretraining | With PatchRot Pretraining |
-| :---         |     :---:      |     :---:      |
-| Cifar10 | 84.4 | 91.3 |
-| Cifar100 | 56.5 | 66.7 |
-| FashionMNIST | 93.4 | 94.6|
-| SVHN | 92.9 | 96.4 |
-| Animals10N | 69.6 | 79.5 |
-| TinyImageNet | 38.4 | 48.8 |
-| ImageNet100 | 64.6 | 75.4 |
+PatchRot significantly improves performance across diverse datasets. The table below compares baseline training (without PatchRot pretraining) and training with PatchRot pretraining:
+
+| Dataset         | Without PatchRot Pretraining | With PatchRot Pretraining |
+|------------------|------------------------------|----------------------------|
+| CIFAR10          | 84.4                         | 91.3                       |
+| CIFAR100         | 56.5                         | 66.7                       |
+| FashionMNIST     | 93.4                         | 94.6                       |
+| SVHN             | 92.9                         | 96.4                       |
+| Animals10N       | 69.6                         | 79.5                       |
+| TinyImageNet     | 38.4                         | 48.8                       |
+| ImageNet100      | 64.6                         | 75.4                       |
+
 
 ## Cite
 If you found our work/code helpful, please cite our paper:
