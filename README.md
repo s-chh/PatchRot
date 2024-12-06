@@ -7,7 +7,7 @@ Summary: Self-supervised technique for vision transformers that predicts rotatio
 <img src="/figures/Toy.jpg" width="90%"></img>
 </p>
 
-**Overview**
+### Overview
 - Self-supervised training strategy for vision transformers to learn rich and transferrable features.
 - PatchRot rotates images and image patches by 0°, 90°, 180°, or 270°.
 - Trains the network to predict the rotation angles of images and image patches via classification.
@@ -15,7 +15,15 @@ Summary: Self-supervised technique for vision transformers that predicts rotatio
 - Pre-train at a smaller size, followed by finetuning at the original size.
 - Learn global and patch-level information of images.
 
-## Run commands (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>):
+## Usage
+### Requirements
+- Python
+- scikit-learn
+- PyTorch
+- torchvision
+- timm for defining Vision Transformer (can be replaced with other network definition)
+
+### Run commands (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>):
 - Run <strong>`main_pretrain.py`</strong> to pre-train the network with PatchRot.
 - Next <strong>`main_finetune.py --init patchrot`</strong> to finetune the network.
 Below is an example on CIFAR10:
@@ -26,10 +34,18 @@ Below is an example on CIFAR10:
 | Finetuning pretrained model | python main_finetune.py --dataset cifar10 --init patchrot |
 - For baseline training (random init) use <strong>`main_finetune.py --dataset cifar10 --init none`</strong>
 - We used a **DeiT-Tiny transformer** for the experiments and modified the patch size based on the dataset.
-   - Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a>
+   - Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a> folder.
+
+## Data
 - To change the dataset, **replace cifar10** with the **appropriate dataset**. <br>
-   - cifar10, cifar100, fashionmnist, and svhn will be auto-downloaded.
-   - tinyImageNet, animals10n, and imagenet100 need to be downloaded, and the path needs to be provided using the "data_path" argument.  
+- Cifar10, Cifar100, Fashionmnist, and Svhn will be auto-downloaded.
+- TinyImageNet, Animals10n, and Imagenet100 need to be downloaded.
+   - Data must be split into 'train' and 'test' folders. 
+   - Path needs to be provided using the "data_path" argument.
+- Dataset links:
+   - TinyImageNet: <a href="http://cs231n.stanford.edu/tiny-imagenet-200.zip">http://cs231n.stanford.edu/tiny-imagenet-200.zip</a> 
+   - Animals10N: <a href="https://dm.kaist.ac.kr/datasets/animal-10n/">https://dm.kaist.ac.kr/datasets/animal-10n/</a>  
+   - ImageNet100: <a href="https://www.kaggle.com/datasets/ambityga/imagenet100">https://www.kaggle.com/datasets/ambityga/imagenet100/</a>  
 
 ## Results
 | Dataset | Without PatchRot Pretraining | With PatchRot Pretraining |
