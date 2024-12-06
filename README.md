@@ -3,6 +3,7 @@ Official Implementation of paper "PatchRot: Self-Supervised Training of Vision T
 
 ## Table of Contents
 - [Introduction](#introduction)
+  - [Short Summary](#short-summary)
   - [Overview](#overview)
 - [Usage](#usage)
   - [Requirements](#requirements)
@@ -12,7 +13,8 @@ Official Implementation of paper "PatchRot: Self-Supervised Training of Vision T
 - [Cite](#cite)
 
 ## Introduction
-**Short Summary:** PatchRot is a self-supervised learning technique designed for Vision Transformers. It leverages image and patch rotation tasks to train networks to predict rotation angles, learning both global and patch-level representations.
+### Short Summary
+PatchRot is a self-supervised learning technique designed for Vision Transformers. It leverages image and patch rotation tasks to train networks to predict rotation angles, learning both global and patch-level representations.
 <p align="center">
 <img src="/figures/Toy.jpg" width="90%"></img>
 </p>
