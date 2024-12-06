@@ -1,19 +1,30 @@
 # PatchRot
 Official Implementation of paper "PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction". <br>
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Overview](#overview)
+- [Usage](#usage)
+  - [Requirements](#requirements)
+  - [Run Commands](#run-commands)
+  - [Data](#data)
+- [Results](#results)
+- [Cite](#cite)
+
 ## Introduction
-1-line summary: Self-supervised technique for vision transformers that predicts rotation angles of images and patches.
+**Short summary**: PatchRot is a self-supervised learning technique designed for Vision Transformers. It leverages image and patch rotation tasks to train networks to predict rotation angles, learning both global and patch-level representations.
 <p align="center">
 <img src="/figures/Toy.jpg" width="90%"></img>
 </p>
 
 ### Overview
-- Self-supervised training strategy for vision transformers to learn rich and transferrable features.
+- Self-supervised introduces a novel self-supervised strategy to learn rich and transferrable features.
 - PatchRot rotates images and image patches by 0°, 90°, 180°, or 270°.
-- Trains the network to predict the rotation angles of images and image patches via classification.
-- Use a buffer between the patches to avoid trivial solutions like edge continuity.
-- Pre-train at a smaller size, followed by finetuning at the original size.
-- Learn global and patch-level information of images.
+- Trains the network to predict the rotation angles of images and image patches as a classification task.
+- Incorporates a buffer between patches to prevent trivial solutions such as edge continuity.
+- Employs pretraining at smaller resolutions, followed by finetuning at the original size.
+- This approach encourages the model to learn both global and local representations, improving its performance on downstream tasks.
+- PatchRot was evaluated using the DeiT-Tiny Transformer architecture, with dataset-specific modifications to patch size.
 
 ## Usage
 ### Requirements
