@@ -18,8 +18,8 @@ Official Implementation of paper "PatchRot: Self-Supervised Training of Vision T
 </p>
 
 ### Overview
-- Self-supervised introduces a novel self-supervised strategy to learn rich and transferrable features.
-- PatchRot rotates images and image patches by 0°, 90°, 180°, or 270°.
+- PatchRot introduces a novel self-supervised strategy to learn rich and transferrable features.
+- Rotates images and image patches by 0°, 90°, 180°, or 270°.
 - Trains the network to predict the rotation angles of images and image patches as a classification task.
 - Incorporates a buffer between patches to prevent trivial solutions such as edge continuity.
 - Employs pretraining at smaller resolutions, followed by finetuning at the original size.
@@ -51,8 +51,8 @@ We used a **DeiT-Tiny transformer** for the experiments and modified the patch s
 - Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a> folder.
 
 ### Data
-- To change the dataset, **replace cifar10** with the appropriate dataset. <br>
-- **Cifar10**, **Cifar100**, **FashionMNIST**, and **SVHN** are automatically downloaded by the script.
+- To change the dataset, **replace CIFAR10** with the appropriate dataset. <br>
+- **CIFAR10**, **CIFAR100**, **FashionMNIST**, and **SVHN** are automatically downloaded by the script.
 - **TinyImageNet**, **Animals10n**, and **Imagenet100** need to be downloaded manually.
 #### Dataset Directory Structure
 For manually downloaded datasets, organize the data in the following directory structure:
