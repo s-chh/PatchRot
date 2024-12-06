@@ -39,6 +39,7 @@ Below is an example on CIFAR10:
 ### Data
 - To change the dataset, **replace cifar10** with the **appropriate dataset**. <br>
 - Cifar10, Cifar100, FashionMNIST, and SVHN will be auto-downloaded.
+ 	-  At the path specified in the "data_path" argument (default: "./data").
 - TinyImageNet, Animals10n, and Imagenet100 need to be downloaded.
    - Data must be split into 'train' and 'test' folders. 
    - Path needs to be provided using the "data_path" argument.
