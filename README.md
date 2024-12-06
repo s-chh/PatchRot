@@ -6,7 +6,7 @@ Official PyTorch Implementation of our upcoming BMVC 2024 PatchRot paper "PatchR
 - PatchRot rotates images and image patches by 0°, 90°, 180°, or 270°.
 - Trains the network to predict the rotation angles of images and image patches via classification.
 - Use a buffer between the patches to avoid trivial solutions like edge continuity.
-- Pre-train at a smaller size and followed by finetuning at the original size.
+- Pre-train at a smaller size, followed by finetuning at the original size.
 - Learn global and patch-level information of images.
 
 ## Run commands (also available in <a href="run_cifar10.sh">run_cifar10.sh</a>):
@@ -18,13 +18,11 @@ Below is an example on CIFAR10:
 | :---         | :---         |
 | PatchRot pretraining | python main_pretrain.py --dataset cifar10 |
 | Finetuning pretrained model | python main_finetune.py --dataset cifar10 --init patchrot |
+- Baseline training from random initialization can be done using <strong>```main_finetune.py --dataset cifar10 --init none```</strong>
+- We used a DeiT-Tiny transformer for the experiments and modified patch sizes based on the dataset (Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a>)
 
-Replace cifar10 with the appropriate dataset. <br>
-CIFAR10, CIFAR100, FashionMNIST, and SVHN datasets will be auto-downloaded. TinyImageNet, Animals10N, and ImageNet100 need to be downloaded, and the path needs to be provided using the "data_path" argument. 
-
-Baseline training from random initialization can be done using <strong>```main_finetune.py --init none```</strong>
-
-We used a DeiT-Tiny transformer for the experiments and modified patch sizes based on the dataset. Details are available in <a href="https://github.com/s-chh/PatchRot/tree/main/config">config folder</a> <br>
+- To change the dataset, replace cifar10 with the appropriate dataset. <br>
+- CIFAR10, CIFAR100, FashionMNIST, and SVHN will be auto-downloaded. TinyImageNet, Animals10N, and ImageNet100 need to be downloaded, and the path needs to be provided using the "data_path" argument.  
 
 ## Results
 | Dataset | Without PatchRot Pretraining | With PatchRot Pretraining |
