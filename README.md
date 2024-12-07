@@ -44,7 +44,7 @@ python main_finetune.py --dataset cifar10 --init patchrot
 ```
 - To train a baseline (Without PatchRot) set init to none: `python main_finetune.py --dataset cifar10 --init none`
 
-We used a **DeiT-Tiny transformer** for the experiments and modified the patch size based on the dataset (refer <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a> folder).
+We used a [DeiT-Tiny Transformer](https://arxiv.org/abs/2012.12877) and modified the patch size based on the dataset (refer <a href="https://github.com/s-chh/PatchRot/tree/main/config">config</a> folder).
 
 ### Data
 - To change the dataset, **replace CIFAR10** with the appropriate dataset. <br>
