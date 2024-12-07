@@ -51,26 +51,11 @@ We used a **DeiT-Tiny transformer** for the experiments and modified the patch s
 ### Data
 - To change the dataset, **replace CIFAR10** with the appropriate dataset. <br>
 - **CIFAR10**, **CIFAR100**, **FashionMNIST**, and **SVHN** are automatically downloaded by the script.
-- **TinyImageNet**, **Animals10n**, and **Imagenet100** need to be downloaded manually.
-#### Dataset Directory Structure
-For manually downloaded datasets, organize the data in the following directory structure:
-```
-data/
-├── train/
-│ ├── class1/
-│ ├── class2/
-├── test/
-│ ├── class1/
-│ ├── class2/
-```
-#### Dataset Links
-Here are the links to download the required datasets:
-- [TinyImageNet](http://cs231n.stanford.edu/tiny-imagenet-200.zip)  
-- [Animals10N](https://dm.kaist.ac.kr/datasets/animal-10n/)  
-- [ImageNet100](https://www.kaggle.com/datasets/ambityga/imagenet100)  
-
-#### Specifying Dataset Paths
-For manually downloaded datasets, use the `--data_path` argument to specify the path to the dataset. Example:
+- **TinyImageNet**, **Animals10n**, and **Imagenet100** need to be downloaded manually (links below).
+	- [TinyImageNet](http://cs231n.stanford.edu/tiny-imagenet-200.zip)  
+	- [Animals10N](https://dm.kaist.ac.kr/datasets/animal-10n/)  
+	- [ImageNet100](https://www.kaggle.com/datasets/ambityga/imagenet100)  
+- For manually downloaded datasets, use the `--data_path` argument to specify the path to the dataset. Example:
 ```bash
 python main_pretrain.py --dataset tinyimagenet --data_path /path/to/data
 ```
