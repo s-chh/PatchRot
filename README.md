@@ -1,5 +1,5 @@
 # PatchRot
-Official Implementation of paper "PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction". <br>
+Official Implementation of paper [PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction](https://bmvc2024.org/proceedings/391/). <br>
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -75,5 +75,12 @@ PatchRot significantly improves performance across diverse datasets. The table b
 ## Cite
 If you found our work/code helpful, please cite our paper:
 ```
-Bibtex upcoming
+@inproceedings{Chhabra_2024_BMVC,
+author    = {Sachin Chhabra and Hemanth Venkateswara and Baoxin Li},
+title     = {PatchRot: Self-Supervised Training of Vision Transformers by Rotation Prediction},
+booktitle = {35th British Machine Vision Conference 2024, {BMVC} 2024, Glasgow, UK, November 25-28, 2024},
+publisher = {BMVA},
+year      = {2024},
+url       = {https://papers.bmvc2024.org/0391.pdf}
+}
 ```
